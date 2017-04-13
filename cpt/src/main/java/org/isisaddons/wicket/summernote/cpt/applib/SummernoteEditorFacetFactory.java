@@ -20,17 +20,20 @@
 package org.isisaddons.wicket.summernote.cpt.applib;
 
 import java.lang.reflect.Method;
+
+import com.google.common.collect.ImmutableList;
+
 import org.apache.isis.core.metamodel.facetapi.FacetHolder;
 import org.apache.isis.core.metamodel.facetapi.FacetUtil;
-import org.apache.isis.core.metamodel.facetapi.FeatureType;
 import org.apache.isis.core.metamodel.facets.Annotations;
 import org.apache.isis.core.metamodel.facets.FacetFactoryAbstract;
 
+import org.apache.isis.core.metamodel.facetapi.FeatureType;
 
 public class SummernoteEditorFacetFactory extends FacetFactoryAbstract {
 
     public SummernoteEditorFacetFactory() {
-        super(FeatureType.PROPERTIES_AND_ACTIONS);
+        super(ImmutableList.of(FeatureType.PROPERTY, FeatureType.ACTION_PARAMETER_SCALAR));
     }
 
     @Override

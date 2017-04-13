@@ -18,11 +18,11 @@ package org.isisaddons.wicket.summernote.fixture.scripts;
 
 import org.apache.isis.applib.fixturescripts.FixtureScript;
 
-public class SummernoteEditorAppTearDownFixture extends FixtureScript {
+public class SummernoteDemoTearDownFixture extends FixtureScript {
 
     private final String ownedBy;
 
-    public SummernoteEditorAppTearDownFixture(String ownedBy) {
+    public SummernoteDemoTearDownFixture(String ownedBy) {
         this.ownedBy = ownedBy;
     }
 

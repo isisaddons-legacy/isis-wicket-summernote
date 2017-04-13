@@ -16,21 +16,23 @@
  */
 package org.isisaddons.wicket.summernote.cpt.ui.editor;
 
-import de.agilecoders.wicket.extensions.markup.html.bootstrap.editor.SummernoteConfig;
-import de.agilecoders.wicket.extensions.markup.html.bootstrap.editor.SummernoteEditor;
-
 import org.apache.wicket.Component;
 import org.apache.wicket.core.util.string.JavaScriptUtils;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.OnDomReadyHeaderItem;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.panel.Fragment;
-import org.isisaddons.wicket.summernote.cpt.applib.SummernoteEditorFacetAbstract;
+
 import org.apache.isis.core.metamodel.adapter.mgr.AdapterManager;
 import org.apache.isis.viewer.wicket.model.models.EntityModel;
 import org.apache.isis.viewer.wicket.model.models.ScalarModel;
 import org.apache.isis.viewer.wicket.ui.components.scalars.TextFieldValueModel;
 import org.apache.isis.viewer.wicket.ui.panels.PanelAbstract;
+
+import org.isisaddons.wicket.summernote.cpt.applib.SummernoteEditorFacetAbstract;
+
+import de.agilecoders.wicket.extensions.markup.html.bootstrap.editor.SummernoteConfig;
+import de.agilecoders.wicket.extensions.markup.html.bootstrap.editor.SummernoteEditor;
 
 public class SummernoteEditorPanel extends PanelAbstract<ScalarModel> implements TextFieldValueModel.ScalarModelProvider {
 

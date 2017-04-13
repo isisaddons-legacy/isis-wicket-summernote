@@ -20,15 +20,15 @@ import org.isisaddons.wicket.summernote.fixture.scripts.todo.SummernoteEditorToD
 
 import org.apache.isis.applib.fixturescripts.DiscoverableFixtureScript;
 
-public class SummernoteEditorAppSetUpFixture extends DiscoverableFixtureScript {
+public class SummernoteDemoSetUpFixture extends DiscoverableFixtureScript {
 
     private final String user;
 
-    public SummernoteEditorAppSetUpFixture() {
+    public SummernoteDemoSetUpFixture() {
         this(null);
     }
 
-    public SummernoteEditorAppSetUpFixture(String ownedBy) {
+    public SummernoteDemoSetUpFixture(String ownedBy) {
         this.user = ownedBy;
     }
 
@@ -38,7 +38,7 @@ public class SummernoteEditorAppSetUpFixture extends DiscoverableFixtureScript {
         final String ownedBy = this.user != null? this.user : getContainer().getUser().getName();
 
         // prereqs
-        execute(new SummernoteEditorAppTearDownFixture(ownedBy), executionContext);
+        execute(new SummernoteDemoTearDownFixture(ownedBy), executionContext);
 
         // create
         execute(new SummernoteEditorToDoItemsFixture(), executionContext);

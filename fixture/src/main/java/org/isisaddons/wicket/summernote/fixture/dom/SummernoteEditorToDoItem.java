@@ -401,6 +401,13 @@ public class SummernoteEditorToDoItem implements Comparable<SummernoteEditorToDo
         this.notes = notes;
     }
 
+    public SummernoteEditorToDoItem updateNotes(
+            @SummernoteEditor(height = 100, maxHeight = 300)
+            final String notes) {
+        setNotes(notes);
+        return this;
+    }
+
     // //////////////////////////////////////
     // Attachment (property)
     // //////////////////////////////////////
